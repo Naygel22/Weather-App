@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+body{
+  background-color: hsl(218, 23%, 16%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.app{
+  background: rgb(145, 145, 233);
+  width: 500px;
+  border-radius: 15px;
+}
+.searchBar{
+  display: flex;
+  justify-content: center;
+  
+}
+.inputText{
+  
+}
+.buttonContainer{
+  background-color: wheat;
+}
+.temperature{
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 50px;
+}
