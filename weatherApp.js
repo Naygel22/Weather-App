@@ -29,11 +29,11 @@ function createElements(data) {
 
   //only letters in input
   inputText.addEventListener('input', () => {
-    let inputCityText = inputText.value.replace(/[^a-zA-Z]/g, ''); 
+    let inputCityText = inputText.value.replace(/\d/g, '');
     inputText.value = inputCityText.trim(); 
   });
   //
-  
+
   const buttonContainer = document.createElement('div');
   buttonContainer.classList.add('buttonContainer');
   searchBar.appendChild(buttonContainer);
@@ -45,7 +45,13 @@ function createElements(data) {
 
   buttonContainer.addEventListener('click', () => {
     showWeather(inputText.value);
-  })
+  });
+
+  inputText.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+      showWeather(inputText.value);
+    }
+  });
   
   const weatherImg = document.createElement('img');
   weatherImg.classList.add('weatherImg');
@@ -113,6 +119,20 @@ function createElements(data) {
   humidityValue.classList.add('humidityValue');
   humidityValue.textContent = `${data.main.humidity}%`;
   humiditySection.appendChild(humidityValue);
+
+  const weatherDetailsTexts = document.createElement('div');
+  weatherDetailsTexts.classList.add('weatherDetailsTexts');
+  app.appendChild(weatherDetailsTexts);
+
+  const windText = document.createElement('div');
+  windText.classList.add('windText');
+  windText.textContent = 'Wind speed';
+  weatherDetailsTexts.appendChild(windText);
+
+  const humidityText = document.createElement('div');
+  humidityText.classList.add('humidityText');
+  humidityText.textContent = 'Humidity';
+  weatherDetailsTexts.appendChild(humidityText);
 }
 
 

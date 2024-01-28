@@ -12,15 +12,19 @@ body{
   height: 100vh;
 }
 .app{
-  background: rgb(145, 145, 233);
-  width: 500px;
+  /* background: rgb(145, 145, 233); */
+  background-image: url(skyimage3.jpg);
+  width: 480px;
   border-radius: 15px;
-  padding: 20px;
+  padding: 40px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .searchBar{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
 }
 .inputText{
   border-radius: 10px;
@@ -36,6 +40,7 @@ body{
   justify-content: center;
   align-items: center;
   height: 40px;
+  cursor: pointer;
 }
 .searchLoupe{
   width: 43%;
@@ -47,6 +52,13 @@ body{
   font-weight: 700;
   font-size: 50px;
   margin-top: -20px;
+
+  color: black;           
+  text-shadow:
+    -1px -1px 0 #ffffff,      
+     1px -1px 0 #ffffff,      
+    -1px  1px 0 #ffffff,      
+     1px  1px 0 #ffffff;
 }
 .weatherImg {
   display: block;
@@ -54,17 +66,23 @@ body{
   margin-right: auto;
 }
 .cityName{
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 700;
   display: flex;
   justify-content: center;
   margin-top: 5px;
+  color: black;           
+  text-shadow:
+    -1px -1px 0 #e4e3e3,      
+     1px -1px 0 #e4e3e3,      
+    -1px  1px 0 #e4e3e3,      
+     1px  1px 0 #e4e3e3;           
 }
 .weatherDetails{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -84,8 +102,29 @@ body{
 .windValue, .humidityValue{
   margin-left: 15px;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 19px;
+  color: white;           /* Ustawienie koloru tekstu na biały */
+  text-shadow:
+    -1px -1px 0 #000,      /* Czarna obwódka z góry-lewej strony */
+     1px -1px 0 #000,      /* Czarna obwódka z góry-prawej strony */
+    -1px  1px 0 #000,      /* Czarna obwódka z dołu-lewej strony */
+     1px  1px 0 #000;
 }
 .windValue{
   width: 100%;
+}
+.weatherDetailsTexts{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 91px;
+  margin-top: 10px;
+  font-weight: 700;
+  color: white;           /* Ustawienie koloru tekstu na biały */
+  text-shadow:
+    -1px -1px 0 #000,      /* Czarna obwódka z góry-lewej strony */
+     1px -1px 0 #000,      /* Czarna obwódka z góry-prawej strony */
+    -1px  1px 0 #000,      /* Czarna obwódka z dołu-lewej strony */
+     1px  1px 0 #000;
 }
