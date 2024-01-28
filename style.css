@@ -15,31 +15,77 @@ body{
   background: rgb(145, 145, 233);
   width: 500px;
   border-radius: 15px;
+  padding: 20px;
 }
 .searchBar{
   display: flex;
   justify-content: center;
-  
+  align-items: center;
 }
 .inputText{
-  
+  border-radius: 10px;
+  height: 40px;
+  border: none;
+  padding-left: 10px;
 }
 .buttonContainer{
   background-color: wheat;
+  margin-left: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+.searchLoupe{
+  width: 43%;
+  height: auto;
 }
 .temperature{
   display: flex;
   justify-content: center;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 50px;
+  margin-top: -20px;
 }
-.weatherImg{
-  display: flex;
-  justify-content: center;
+.weatherImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .cityName{
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
   display: flex;
   justify-content: center;
+  margin-top: 5px;
+}
+.weatherDetails{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.windSection, .humiditySection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.windImg{
+  width: 50%;
+  height: auto;
+}
+.humidityImg{
+  width: 70%;
+  height: auto;
+}
+.windValue, .humidityValue{
+  margin-left: 15px;
+  font-weight: 600;
+  font-size: 17px;
+}
+.windValue{
+  width: 100%;
 }
