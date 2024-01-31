@@ -16,6 +16,8 @@ async function showWeather(city) {
 
 showWeather('Białystok');
 
+const KELVIV_FACTOR = 273.15;
+
 
 function createElements(data) {
 
@@ -78,10 +80,15 @@ function createElements(data) {
     weatherImg.src = "images/snow.png";
   }
 
+
+  function convertToCelsius(temp) {
+    return Math.ceil(temp - KELVIV_FACTOR)
+  }
+
   const temperature = document.createElement('div');
   temperature.classList.add('temperature');
   app.appendChild(temperature);
-  temperature.textContent = `${Math.ceil(data.main.temp - 273.15)}°C`;
+  temperature.textContent = `${convertToCelsius(data.main.temp)}°C`;
 
   const cityName = document.createElement('div');
   cityName.classList.add('cityName');
